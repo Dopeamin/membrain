@@ -3,7 +3,7 @@
     margin:0px;
 }
 .body{
-    background-image: url("../assets/back.jpg");
+    
     overflow: hidden;
     background-position-y: -100px;
     background-size: cover;
@@ -35,4 +35,22 @@ app-explore{
 }
 .scrolled{
     transform: translateY(100vh);
+}
+
+.cursor{
+    width:12px;
+    height:12px;
+    background-color: #E3088B;
+    position: fixed;
+    z-index:1;
+    border-radius: 30px;
+    border:1px solid #E3088B;
+    box-shadow: 0px 0px 30px #E3088B;
+    transition: width 0.25s ease-out,height 0.25s ease-out;
+}
+a:hover + .cursor{
+    width:40px;
+    height:40px;
+    transform: translate(-10px,-10px);
+    background-color: transparent;
 }

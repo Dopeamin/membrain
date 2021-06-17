@@ -1,0 +1,38 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+.body{
+    background-image: url("../assets/back.jpg");
+    overflow: hidden;
+    background-position-y: -100px;
+    background-size: cover;
+    background-attachment: fixed;
+    height:100vh;
+    padding:0px;
+    margin:0px;
+    width:100vw;
+}
+app-title{
+    position: relative;
+    top:150px;
+}
+.header{
+    width:100%;
+    height:fit-content;
+    position: fixed;
+    z-index:100;
+}
+app-explore{
+    position: absolute;
+    z-index:1;
+    top:-100vh;
+    
+    transition: transform 1s ease-out ;
+}
+.notscrolled{
+    transform:translateY(0vh);
+}
+.scrolled{
+    transform: translateY(100vh);
+}

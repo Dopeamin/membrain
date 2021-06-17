@@ -1,0 +1,26 @@
+h1{
+    color:#E3088B;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 900;
+    letter-spacing: 10px;
+    font-size: 150px;
+    text-shadow: 0px 0px 30px #E3088B;
+    margin-bottom:-60px;
+}
+h3{
+    color:#D9D9D9;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 600;
+    letter-spacing: 10px;
+    font-size: 50px;
+}
+
+.title{
+    
+    margin: auto;
+    margin-top:-30px;
+    width:80%;
+    max-width: 1400px;
+    text-align: center;
+    margin-top: 150px;
+}

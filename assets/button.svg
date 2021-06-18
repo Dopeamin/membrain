@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="504" height="198" viewBox="0 0 504 198">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.032" y1="0.455" x2="0.939" y2="0.463" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f603c5"/>
+      <stop offset="0.465" stop-color="#0aa5bd"/>
+      <stop offset="1" stop-color="#07b794"/>
+    </linearGradient>
+    <filter id="Subtraction_1" x="0" y="0" width="504" height="198" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feFlood flood-color="#ff00ec"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Subtraction_1)">
+    <path id="Subtraction_1-2" data-name="Subtraction 1" d="M360,108H54A54.014,54.014,0,0,1,32.981,4.244,53.662,53.662,0,0,1,54,0H360a54.014,54.014,0,0,1,21.019,103.756A53.662,53.662,0,0,1,360,108ZM52.547,4.307a49.731,49.731,0,1,0,0,99.462h308.2a49.731,49.731,0,0,0,0-99.462Z" transform="translate(45 45)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

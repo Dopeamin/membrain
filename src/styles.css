@@ -9,3 +9,40 @@ body{
     padding:0px;
     margin:0px;
 }
+
+a:hover + .cursor{
+    width:40px;
+    height:40px;
+    transform: translate(-10px,-10px);
+    background-color: transparent;
+}
+h3:hover + .cursor{
+    width:40px;
+    height:40px;
+    transform: translate(-10px,-10px);
+    background-color: transparent;
+}
+.cursor{
+    width:12px;
+    pointer-events: none;
+    height:12px;
+    background-color: #E3088B;
+    position: fixed;
+    z-index:3;
+    border-radius: 30px;
+    border:2px solid #E3088B;
+    box-shadow: 0px 0px 30px #E3088B;
+    transition: width 0.25s ease-out,height 0.25s ease-out;
+}
+app-explorer{
+    z-index:2;
+}
+.cursoractive{
+    width:40px !important;
+    height:40px !important;
+    transform: translate(-10px,-10px) !important;
+    background-color: transparent !important;
+}
+app-article .container .content{
+    z-index: 20;
+}

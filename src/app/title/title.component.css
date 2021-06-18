@@ -24,3 +24,29 @@ h3{
     text-align: center;
     margin-top: 150px;
 }
+.wrapper img{
+    position: absolute;
+    z-index:1;
+    transform: translate(-75%,-40%);
+}
+.wrapper{
+    margin:auto;
+    display: block;
+    z-index:1;
+
+}
+
+.wrapper h3:hover{
+    transform: scale(1.1);
+}
+.wrapper h3, .wrapper a{
+    z-index:2;
+    position: relative;
+    display: inline-block;
+    height:fit-content;
+    margin:0px;
+    font-size: 36px;
+    font-weight: 400;
+    transform: scale(1);
+    transition: transform 0.75s ease-out;
+}

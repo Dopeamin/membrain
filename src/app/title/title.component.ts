@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { GlobalVariables } from '../GlobalVariables';
 
 @Component({
   selector: 'app-title',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./title.component.css']
 })
 export class TitleComponent implements OnInit {
-
-  constructor() { }
+  @Input() index:number = 0;
+  constructor(private variables:GlobalVariables) {
+  }
 
   ngOnInit(): void {
   }
-
+  onHover(event:any){
+    this.variables.cursor = "cursoractive";
+  }
+  onUnHover(event:any){
+    this.variables.cursor = "";
+  }
 }

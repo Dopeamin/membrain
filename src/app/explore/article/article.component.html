@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="content">
+        <img src="assets/addiction1.jpeg">
+        <div style="padding:30px;z-index: 11;">
+            <h1>LOREM IPSUM</h1>
+            <h3>IPSUM</h3>
+            <p style="width:400px">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae dolorem, molestiae, quas provident modi ut voluptate placeat odit autem fuga numquam asperiores nihil dolor quo blanditiis aut quam reprehenderit fugiat!</p>
+            <div class="button" (mouseover)="onHover($event)" (mouseout)="onUnHover($event)">
+                <h1>SEE MORE</h1>
+            </div>
+            
+        </div>
+        
+        <div class="border"></div>
+        <div *ngFor="let element of array, let index = index" [ngClass]="class[index]" [style.top]="index*100+'px'"></div>
+    </div>
+</div>

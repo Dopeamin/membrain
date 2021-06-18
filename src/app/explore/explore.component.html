@@ -1,3 +1,8 @@
-<div class="container">
+<div class="container"  (wheel)="onMouseWheel($event)">
+    <div class="article-container">
+        <app-article [style.transform]="skewed? 'translateX(' + positionX + 'px) skew('+direction+'deg, '+direction+'deg)':'translateX(' + positionX + 'px)'"></app-article>
+        <app-article [style.transform]="skewed? 'translateX(' + positionX + 'px) skew('+direction+'deg, '+direction+'deg)':'translateX(' + positionX + 'px)'"></app-article>
+    </div>
+    
     <app-scroller></app-scroller>
 </div>

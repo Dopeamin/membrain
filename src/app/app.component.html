@@ -1,9 +1,10 @@
 <div class="body"  (wheel)="onMouseWheel($event)" style="background-image: url('assets/back.jpg');">
+    <div class="cursor" [ngClass]="'cursor '+cursor" [ngStyle]="{'position':'absolute','left':x+'px','top':y+'px'}"></div>
 <div class="header">
     <app-header></app-header>
 </div>
-<app-title></app-title>
+<app-title [index]="first? 1:10"></app-title>
 <app-explore [ngClass]="class"></app-explore>
+
 </div>
-<a href="" style="position: fixed;color:white;top:200px;left:200px">hi</a>
-<div class="cursor" [ngStyle]="{'position':'absolute','left':x+'px','top':y+'px'}"></div>
+

@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { GlobalVariables } from '../GlobalVariables';
-import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { GlobalVariables } from 'src/app/GlobalVariables';
+
 @Component({
-  selector: 'app-scroller',
-  templateUrl: './scroller.component.html',
-  styleUrls: ['./scroller.component.css']
+  selector: 'app-article',
+  templateUrl: './article.component.html',
+  styleUrls: ['./article.component.css']
 })
-export class ScrollerComponent implements OnInit {
-  class = "";
+export class ArticleComponent implements OnInit {
+  array = Array(7);
+  
+  class =["bar","bar2","bar3","bar4","bar5","bar6","bar7","bar8","bar9","bar10","bar11","bar12","bar13"];
   interval :any;
   scrolled:boolean = false;
-  arrowRight = faArrowRight;
-  arrowLeft = faArrowLeft;
   constructor(private variables : GlobalVariables) { }
 
   ngOnInit(): void {
@@ -20,8 +20,11 @@ export class ScrollerComponent implements OnInit {
       if(this.scrolled){
         clearInterval(this.interval);
         setTimeout(() => {
-            this.class="show";
-          },1500
+            for(let i = 0;i<7;i++){
+              this.class[i] = this.class[i] + " hiden";
+            }
+            
+          },1000
         
         )
         
@@ -41,10 +44,10 @@ export class ScrollerComponent implements OnInit {
      this.scrolled = this.variables.first;
      console.log(this.scrolled);
  }
- onHover(event:any){
-  this.variables.cursor = "cursoractive";
-}
-onUnHover(event:any){
-  this.variables.cursor = "";
-}
+  onHover(event:any){
+    this.variables.cursor = "cursoractive";
+  }
+  onUnHover(event:any){
+    this.variables.cursor = "";
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output ,EventEmitter} from '@angular/core';
 import { GlobalVariables } from '../GlobalVariables';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 @Component({
@@ -12,8 +12,12 @@ export class ScrollerComponent implements OnInit {
   scrolled:boolean = false;
   arrowRight = faArrowRight;
   arrowLeft = faArrowLeft;
+  @Input() in = 1;
+  @Output() clickRight = new EventEmitter();
   constructor(private variables : GlobalVariables) { }
-
+  clickedRight(event:any){
+    this.clickRight.emit(event);
+  }
   ngOnInit(): void {
     this.interval = setInterval(() => {
       this.checkUpdate();

@@ -9,10 +9,20 @@ export class ExploreComponent implements OnInit {
   
   positionX = 0;
   direction = 0;
+  number = 1;
   skewed = false;
   ngOnInit(): void {
     setInterval(() => {
       this.skewed = false;
+      if(this.positionX<-2400){
+        this.number = 4;
+      }else if(this.positionX<-1600){
+        this.number = 3;
+      }else if(this.positionX<-700){
+        this.number = 2;
+      }else{
+        this.number = 1;
+      }
     },500);
   }
   onMouseWheel(event:any){
@@ -22,12 +32,24 @@ export class ExploreComponent implements OnInit {
       this.direction=-4;
     }
     this.skewed = true;
-    if(this.positionX<=0){
+    if(this.positionX<=0 && this.positionX>=-3000){
       this.positionX -= event.deltaY*1.5;
+    }else if(this.positionX<-3000){
+      this.positionX=-3000;
+    
     }else{
       this.positionX = 0;
     }
     
     console.log(event.deltaY)
+  }
+  onClickRight(event:any){
+    if(this.positionX>-700){
+      this.positionX = -700;
+    }else if(this.positionX>-2000){
+      this.positionX = -2000;
+    }else if(this.positionX>-2800){
+      this.positionX = -2800;
+    }
   }
 }

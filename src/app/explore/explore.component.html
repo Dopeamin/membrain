@@ -2,7 +2,9 @@
     <div class="article-container">
         <app-article [style.transform]="skewed? 'translateX(' + positionX + 'px) skew('+direction+'deg, '+direction+'deg)':'translateX(' + positionX + 'px)'"></app-article>
         <app-article [style.transform]="skewed? 'translateX(' + positionX + 'px) skew('+direction+'deg, '+direction+'deg)':'translateX(' + positionX + 'px)'"></app-article>
+        <app-article [style.transform]="skewed? 'translateX(' + positionX + 'px) skew('+direction+'deg, '+direction+'deg)':'translateX(' + positionX + 'px)'"></app-article>
+        <app-article [style.transform]="skewed? 'translateX(' + positionX + 'px) skew('+direction+'deg, '+direction+'deg)':'translateX(' + positionX + 'px)'"></app-article>
     </div>
     
-    <app-scroller></app-scroller>
+    <app-scroller [in]="number" (clickRight)="onClickRight($event)"></app-scroller>
 </div>

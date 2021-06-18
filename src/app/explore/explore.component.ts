@@ -16,9 +16,9 @@ export class ExploreComponent implements OnInit {
       this.skewed = false;
       if(this.positionX<-2400){
         this.number = 4;
-      }else if(this.positionX<-1600){
+      }else if(this.positionX<-1500){
         this.number = 3;
-      }else if(this.positionX<-700){
+      }else if(this.positionX<-600){
         this.number = 2;
       }else{
         this.number = 1;
@@ -50,6 +50,17 @@ export class ExploreComponent implements OnInit {
       this.positionX = -2000;
     }else if(this.positionX>-2800){
       this.positionX = -2800;
+    }
+  }
+  onClickLeft(event:any){
+    if(this.positionX<-2800){
+      this.positionX=-2800;
+    }else if(this.positionX<-2000){
+      this.positionX=-2000;
+    }else if(this.positionX<-700){
+      this.positionX=-700;
+    }else{
+      this.positionX=0;
     }
   }
 }

@@ -14,9 +14,13 @@ export class ScrollerComponent implements OnInit {
   arrowLeft = faArrowLeft;
   @Input() in = 1;
   @Output() clickRight = new EventEmitter();
+  @Output() clickLeft = new EventEmitter();
   constructor(private variables : GlobalVariables) { }
   clickedRight(event:any){
     this.clickRight.emit(event);
+  }
+  clickedLeft(event:any){
+    this.clickLeft.emit(event);
   }
   ngOnInit(): void {
     this.interval = setInterval(() => {

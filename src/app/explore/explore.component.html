@@ -6,5 +6,5 @@
         <app-article [style.transform]="skewed? 'translateX(' + positionX + 'px) skew('+direction+'deg, '+direction+'deg)':'translateX(' + positionX + 'px)'"></app-article>
     </div>
     
-    <app-scroller [in]="number" (clickRight)="onClickRight($event)"></app-scroller>
+    <app-scroller [in]="number" (clickRight)="onClickRight($event)" (clickLeft)="onClickLeft($event)"></app-scroller>
 </div>
